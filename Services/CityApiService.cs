@@ -10,13 +10,10 @@ namespace DistanceChecker.Services
     {
         private readonly HttpClient _httpClient;
         private readonly HttpResponseService _httpResponseService;
-        private readonly CityApiConfiguration _options;
 
-
-        public CityApiService(HttpClient httpClient, IOptions<CityApiConfiguration> options, HttpResponseService httpResponseService)
+        public CityApiService(HttpClient httpClient, HttpResponseService httpResponseService)
         {
             _httpClient = httpClient;
-            _options = options.Value;
             _httpResponseService = httpResponseService;
         }
 
